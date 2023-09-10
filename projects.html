@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+
+  @media screen and (max-width: 600px) {
+  
+    #id01,#id04{
+      padding-top: 14vh;cvcv  
+    }
+  
+  }
+   
+</style>
+
+</head>
+
+<body class="w3-black">
+  <!-- Project Section -->
+  <div class="w3-padding-64 w3-content" id="projects">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-container">
+      <h2>Projects Worked on</h2>
+      <p>Click on icon to know more about projects.</p>
+
+     
+      <br><br>
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button " style="width:200px; border-radius: 50%; padding: 80px;background-image: url('search2.png');background-repeat: no-repeat;margin-top: -2px;position: relative  ; padding-left:40px;"  ><b>Generic Search<b></button>
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button" style="width:200px; border-radius: 50%; padding: 80px;background-image: url('Bonsai.png');background-repeat: no-repeat;margin-top: -2px;position: relative  ; margin-left: 100px ;"  >Bonsai</button>
+      <br><br>
+      <button onclick="document.getElementById('id03').style.display='block'" class="w3-button" style="width:200px; border-radius: 50%; padding: 80px;background-image: url('powapps.png');background-repeat: no-repeat;margin-top: -2px;position: relative  ; padding-left: 50px;"  >Power Apps</button>
+
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button" style="width:200px; border-radius: 50%; padding: 80px;background-image: url('flask.png');background-repeat: no-repeat;margin-top: -2px;position: relative  ; padding-left: 75px;color: black;background-color: grey;margin-left: 100px ;"  >Flask</button>
+        <br><br>
+      <button onclick="document.getElementById('id04').style.display='block'" class="w3-button" style="width:200px; border-radius: 50%;padding: 90px;background-image: url('arduino.png');background-repeat: no-repeat;background-size: cover ;margin-top: -2px;position: relative;"></button>
+      <br><br>
+        
+      
+
+
+
+      <div id="id01" class="w3-modal" style="margin-top: -14vh;">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="height:100%;width:100%;background-color: black ;">
+          <header class="w3-container w3-purple"> 
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <center><h2>Bonsai</h2></center>
+          </header>
+
+          <div class="w3-bar w3-border-top w3-border-bottom" id="divv">
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'MOAB')" style="">MOAB </button>
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'POD')">Product Delivery</button>
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'Emanagement')">Energy Management
+            </button>
+          </div>
+
+          <div id="MOAB" class="w3-container city">
+            <h1>MOAB</h1>
+            <p>MOAB is a simple ball balancing machine which balances a ball on unstable plate.</p>
+            <p>MOAB is built using BONSAI which is AI based technology used to create brains.</p>
+            <p>After training of MOAB brain when exported, the trained AI will keep the ball in the center of the plate for as long as possible.</p>
+            <p>The Moab sample uses a simulation for brain training. A single ball balances on a movable plate.
+
+              The simulation model tracks the position of the ball on an (x,y) plane, the velocity of the ball, and the changing angle of the plate over time.
+
+              On every training iteration, Bonsai receives an ObservableState object from the simulator with the following state information:
+            </p>
+            <center><img src="Bonsai1.png"></center>
+            <div>
+              <br><br>
+              MOAB brain is created with help of INKLING language which is AI based language specifically designed for training brains in Bonsai by microsoft.
+              <h3> Concept list</h3>
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <h4><b>States</b></h4>
+                  <p>MoveToCenter takes ObservableState as input, which means it can access all of the available simulation state information during training.</p>
+                  <ul>
+                  <li><b>ball_x:</b> </li>
+                  <li>ball_y</li>
+                  <li>ball_vel_x</li>
+                  <li>ball_vel_y</li>
+                  </ul>
+                </div>
+
+                <div class="w3-third">
+                  <h4><b>Sim Actions</b></h4>
+                  <p>On each training iteration, the brain can alter the angle of the plate to alter the velocity of the ball:</p>
+                  <ul>
+                    <li><b>input_pitch</b></li>
+                    <li><b>input_roll</b></li>
+                  </ul>
+                </div>
+
+                <div class="w3-third">
+                  <h4><b>Goal Objectives</b></h4>
+                  <ul>
+                    <li><b>Objective:</b> Do not allow the ball to fall off the plate</li>
+                    <li><b>Type:</b> avoid</li>
+                    <li><b>Tracking value:</b> current ball position (ball_x, ball_y)</li>
+                    <li><b>Range to avoid:</b> the outer edge of the plate as defined by 20% of the radius.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="POD" class="w3-container city">
+            <h1>Product Delivery</h1>
+            <p>3mfgs and 15 distributing centers</p>
+          </div>
+
+          <div id="Emanagement" class="w3-container city">
+            <h1>Energy Management</h1>
+            <p>Replacing Thermister</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div id="id03" class="w3-modal" style="margin-top: -14vh;">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="height:100%;width:100%;background-color: black ;">
+          <header class="w3-container w3-purple"> 
+          <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <center><h2>Power Apps</h2></center>
+          </header>
+
+          <div class="w3-bar w3-border-top w3-border-bottom">
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'powerapps')">POWER APPS</button>
+          </div>
+
+          <div id="powerapps" class="w3-container city">
+            <center>  
+              <video width="620" height="540" controls>
+               <source src="arduino1.mp4" type="video/mp4">
+              </video>
+            </center>
+            <h1>OBSTACLE AVOID ROBO</h1>
+            <p>This robo avoids the obstacle by sensing the distance with help of ultrasonic sensor. 
+               When obstacle is in front of the robo and if the distance between obstacle and robo is less then 10 cm 
+               then it move one step back rotates the ultrasonic left and right with help of servo motor. 
+               If left distance is greater then right side distance then the robo will turn left (90 degree turn) and vice versa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="id03" class="w3-modal" style="margin-top: -14vh;">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="height:100%;width:100%;background-color: black ;">
+          <header class="w3-container w3-purple"> 
+          <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <center><h2>POWER APPS</h2></center>
+          </header>
+
+          <div class="w3-bar w3-border-top w3-border-bottom">
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'powerapps')">ARDUINO</button>
+          </div>
+
+          <div id="powerapps" class="w3-container city">
+            <center>  
+              <video width="620" height="540" controls>
+              <source src="arduino1.mp4" type="video/mp4">
+              </video>
+            </center>
+            <h1>POWER PAGES</h1>
+            <p>Designing Web Pages for bank creation</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    </div>
+  
+
+  </div>
+
+
+
+
+      <div id="id04" class="w3-modal" style="margin-top: -14vh;">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="height:100%;width:100%;background-color: black ;">
+          <header class="w3-container w3-purple"> 
+          <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <center><h2>ARDUINO</h2></center>
+          </header>
+
+          <div class="w3-bar w3-border-top w3-border-bottom">
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'ARDUINO')">ARDUINO</button>
+          </div>
+
+          <div id="ARDUINO" class="w3-container city">
+            <center>  
+              <video width="620" height="540" controls>
+               <source src="arduino1.mp4" type="video/mp4">
+              </video>
+            </center>
+            <h1>OBSTACLE AVOID ROBO</h1>
+            <p>This robo avoids the obstacle by sensing the distance with help of ultrasonic sensor. 
+               When obstacle is in front of the robo and if the distance between obstacle and robo is less then 10 cm 
+               then it move one step back rotates the ultrasonic left and right with help of servo motor. 
+               If left distance is greater then right side distance then the robo will turn left (90 degree turn) and vice versa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="id04" class="w3-modal" style="margin-top: -14vh;">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="height:100%;width:100%;background-color: black ;">
+          <header class="w3-container w3-purple"> 
+          <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+          <center><h2>ARDUINO</h2></center>
+          </header>
+
+          <div class="w3-bar w3-border-top w3-border-bottom">
+            <button class="tablink w3-bar-item w3-button" id="but" onclick="openCity(event, 'ARDUINO')">ARDUINO</button>
+          </div>
+
+          <div id="ARDUINO" class="w3-container city">
+            <center>  
+              <video width="620" height="540" controls>
+               <source src="arduino1.mp4" type="video/mp4">
+              </video>
+            </center>
+            <h1>OBSTACLE AVOID ROBO</h1>
+            
+            <p>asdsadsadsd</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    </div>
+  
+
+  </div>
+
+
+
+  <script>  
+    document.getElementsByClassName("tablink")[0].click();
+
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].classList.remove("w3-light-grey");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.classList.add("w3-light-grey");
+    }
+  </script>
+
+
+</body>
+</html>

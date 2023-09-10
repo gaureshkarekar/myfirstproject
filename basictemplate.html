@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+
+#uparrow{
+  height: 35px;
+  position: relative;
+  animation-name: arrow;
+  animation-duration: 0.5s;
+  animation-iteration-count:infinite; 
+}
+
+/*@keyframes arrow {
+  0%   {height:35px;}
+  25%  {height:45px;}
+  50%  {height:55px;}
+  75%  {height:45px;}
+  100% {height:35px;}
+}
+*/
+</style>
+</head>
+<script>
+ $(document).ready(function(){
+  $(document).keypress(function(){
+    var cap = $("#caption");
+    cap.animate({fontSize: '2em'}, "slow");
+    cap.animate({fontSize: '1em'}, "slow");
+            }); 
+  });
+
+ $(document).ready(function(){
+   $("#skills").click(function(){
+       $("#uparrow").hide();
+       $("#Programminglanguage").slideToggle("slow");
+   });
+ });
+
+</script>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <br><br><br><br><br><br><wbr>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="projects.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PROJECTS </p>
+  </a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Gauresh Karekar.</h1>
+    <p id="caption">Learning Software developer.</p>
+    <img src="Gauresh.jpeg" alt="boy" class="w3-image" width="300" height="300" style="border-radius:50%;">
+    
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Gauresh Karekar</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>I am a software developer, started my journey by printing <b>"Hello World"<b> in <b>C<b>.I am a software developer with problem-solving skills and I have a drive to learn new technologies committed to utilizing my skills to help others, while working towards the mission of a company.
+  
+    </p><br><br>
+    <div id="skills" style="padding: 25px; border-radius: 20px;background-color: purple; width: 22%;">
+      <i class="fa fa-hand-o-right" style="color:white;"></i> <b style="color: black;">My Skills<b>
+    </div><br>
+    <!-- <img id="uparrow" src="uparrow.png" style="margin-left: 5%;"><br><br>   -->
+    
+    <!-- <h3 id="skills" style="color:white;">My Skills</h3><br><br> -->
+
+
+    <div id="Programminglanguage" style="display: none;color:white;">
+      <h4 class="w3-wide" style="color:white;">Back end Programming language</h4><br>
+      <p class="w3-wide">Python</p>
+      <div class="w3-white">
+        <div style=" background-color: purple; height:28px;width:75%"></div>
+      </div>
+      <p class="w3-wide">C</p>
+      <div class="w3-white">
+        <div  style="background-color: purple; height:28px;width:90%"></div>
+      </div>
+      <p class="w3-wide">Core Java</p>
+      <div class="w3-white">
+        <div  style="background-color: purple; height:28px;width:50%"></div>
+      </div> <br><br>
+    
+    <h4 class="w3-wide">Front end Programming language</h4><br>
+    <p class="w3-wide">HTML CSS</p>
+    <div class="w3-white">
+      <div  style="background-color: purple; height:28px;width:75%"></div>
+    </div>
+    <p class="w3-wide">Javascript</p>
+    <div class="w3-white">
+      <div  style="background-color: purple; height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">React, Angular, Node JS</p>
+    <div class="w3-white">
+      <div  style="background-color: purple; height:28px;width:1%0"></div>
+    </div> <br><br>
+    
+    </div>
+
+    <button style="padding: 25px; border-radius: 20px;background-color: purple;">
+      <i class="fa fa-download" style="color:white;"></i> Download Resume
+    </button>
+    
+
+     
+    </div>
+    
+   
+  </div>
+  
+  
+  </div>
+    
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <a href="https://www.instagram.com/gaureshkarekar1415/"> <i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <a href="https://www.linkedin.com/in/gauresh-karekar-453511186/?lipi=urn%3Ali%3Apage%3Ad_flagship3_resumebuilder%3BXRqnLIAWQTiSNzWl6U%2F0NA%3D%3D"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
